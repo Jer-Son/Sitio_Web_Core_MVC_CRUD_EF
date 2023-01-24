@@ -1,0 +1,31 @@
+﻿
+
+@{
+    ViewData["Title"] = "Software en el equipo:";
+}
+<h1>Lista de sofware:  @ViewBag.usuario</h1>
+<table class="table table-bordered table-dark">
+    <thead>
+
+   <tr>
+            <th>Nombre Software</th>
+            <th>Version Software</th>
+            <th>Licencia</th>
+   </tr>
+         
+    </thead>
+    <tbody>
+    @for (int i = 0; i < ViewBag.cuenta; i++)
+    {
+        <tr>
+                <td>@ViewBag.lista[i].SoftwareName</td>
+                <td>@ViewBag.lista[i].SoftwareVersion</td>
+                <td>@ViewBag.lista[i].Softwarelicencia</td>
+        </tr>
+
+       
+    }
+    </tbody>
+</table>
+
+
